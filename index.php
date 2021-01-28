@@ -21,13 +21,18 @@
     <title>Index</title>
 </head>
 <body>
-<a href="exo1.php?iteration=10">Exo 1</a>
-<?php
-echo "<br>";
-    for($x = 1; $x <= 10; $x++) {
-        echo "<a href='exo2.php?iteration=$x'>Exo 2 - $x</a><br>";
-    }
-?>
+    <?php
+        if(isset($_GET['error']) && $_GET['error'] === '1') { ?>
+            <div class="error">Attention Jérôme, t'as essayé de me niker hein!!!!</div><?php
+        }
+    ?>
+    <a href="exo1.php?iteration=10">Exo 1</a>
+    <?php
+    echo "<br>";
+        for($x = 1; $x <= 10; $x++) {
+            echo "<a href='exo2.php?iteration=$x'>Exo 2 - $x</a><br>";
+        }
+    ?>
 
 </body>
 </html>
